@@ -1,6 +1,6 @@
 import { createStore, compse } from 'redux';
-import { syncHistoreyWithStore } from 'react-router-redux';
-import { browserHistroy } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { browserHistory } from 'react-router';
 // import root reducer
 import rootReducer from './reducers/index';
 // import seed files
@@ -13,7 +13,6 @@ const defaultState = {
 };
 // create store need two params
 const store = createStore(rootReducer, defaultState);
-const history = syncHistoreyWithStore(browserHistroy);
+export const history = syncHistoryWithStore(browserHistory, store);
 
-export history;
 export default store;
