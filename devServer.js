@@ -2,10 +2,10 @@ var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config.dev');
-var port_number = server.listen(process.env.PORT || 7770);
 
 var app = express();
 var compiler = webpack(config);
+var port_number = app.listen(process.env.PORT || 7770);
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
