@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
@@ -23,6 +25,6 @@ app.listen(port_number, 'localhost', function(err) {
     console.log(err);
     return;
   }
-
+  console.log(process.env);
   console.log('Listening at http://localhost:process.env.PORT || 7770');
 });
