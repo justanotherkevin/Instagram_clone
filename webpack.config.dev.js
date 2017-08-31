@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+require('dotenv').config()
 
 module.exports = {
   devtool: 'source-map',
@@ -25,8 +26,8 @@ module.exports = {
       include: path.join(__dirname, 'client')
     },
     // CSS
-    { 
-      test: /\.styl$/, 
+    {
+      test: /\.styl$/,
       include: path.join(__dirname, 'client'),
       loader: 'style-loader!css-loader!stylus-loader'
     }
